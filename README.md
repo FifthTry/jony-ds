@@ -4,8 +4,6 @@ FPM Blank Package Template Repo
 
 > 🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
 
-![doc-site](doc-site-example.png)
-
 
 ## 🚀 Project Structure
 
