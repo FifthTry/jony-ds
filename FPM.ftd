@@ -1,7 +1,7 @@
 -- import: fpm
 
--- fpm.package: fifthtry.github.io/jony-ds
-download-base-url: https://raw.githubusercontent.com/fifthtry/jony-ds/main
+-- fpm.package: fifthtry.github.io/jony-ps
+download-base-url: https://raw.githubusercontent.com/fifthtry/jony-ps/main
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 
