@@ -10,15 +10,16 @@ dark: white
 -- fpm.toc-item list sections:
 $processor$: toc
 
-- Roadmap: /roadmap/
-- Home Index: /index/
-- Docs: /index/
-- Articles: /index/
-- Home Pictures: /index/
+- Home: /
+- About: /about/
+- Services: /services/
+- Portfolio: /portfolio/
+- Blog: /blog/
+- Work: /work/
+- Contact: /Contact/
 
 -- header: Site
 sections: $sections
-
 
 -- ftd.row header:
 caption title:
@@ -29,24 +30,32 @@ string width: fill
 width: $width
 height: 70
 z-index: 10
-background-color: $purple
+background-color: $fpm.color.main.cta-tertiary.pressed
 color: $white
 
 --- ftd.text: $title
 padding-left: 50
 role: $fpm.type.heading-medium
 padding-top: 10
+width: fill
 
 
 --- header-item: $obj.title
 $loop$: $sections as $obj
 
-
 -- ftd.row header-item:
 caption title:
 
 --- ftd.text: $title
-color: $fpm.color.main.text-strong
+role: $fpm.type.copy-large
+color: $white
+padding-left: 15
+padding-top: 25
+padding-right: 20
+align: right
+width: fill
+
+
 
 
 
