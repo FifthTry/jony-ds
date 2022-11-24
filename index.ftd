@@ -1,57 +1,62 @@
--- import: fifthtry.github.io/jony-ps/assets
+-- import: fpm
+
+-- ftd.color purple: purple
+dark: purple
+
+-- ftd.color white: white
+dark: white
 
 
+-- fpm.toc-item list sections:
+$processor$: toc
 
--- ds.page: Welcome to your [FPM site](https://fpm.dev/)
+- Home: /
+- About: /about/
+- Services: /services/
+- Portfolio: /portfolio/
+- Blog: /blog/
+- Work: /work/
+- Contact: /Contact/
 
-FPM Blank Package Template Repo
+-- header: Site
+sections: $sections
 
-🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
+-- ftd.row header:
+caption title:
+optional ftd.image-src site-logo:
+fpm.toc-item list sections:
+optional string nav-title:
+string width: fill
+width: $width
+height: 70
+z-index: 10
+background-color: $fpm.color.main.cta-tertiary.pressed
+color: $white
 
-
---- ds.image: doc-site
-src: $assets.files.doc-site-example.png
+--- ftd.text: $title
+padding-left: 50
+role: $fpm.type.heading-medium
+padding-top: 10
 width: fill
 
 
---- ds.h1: 🚀 Project Structure
+--- header-item: $obj.title
+$loop$: $sections as $obj
 
-Inside of your FPM project, you'll see the following folders and files:
+-- ftd.row header-item:
+caption title:
 
-
---- ds.code:
-lang:
-
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FPM.ftd
-├── index.ftd
-└── README.md
+--- ftd.text: $title
+role: $fpm.type.copy-large
+color: $white
+padding-left: 15
+padding-top: 25
+padding-right: 20
+align: right
+width: fill
 
 
 
---- ds.h1: 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
---- ds.code:
-lang:
-
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fpm build              | FPM builder installs all `FPM` dependencies|
-| fpm serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
 
 
---- ds.h1: 👀 Want to learn more?
-
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
