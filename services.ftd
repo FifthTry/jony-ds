@@ -16,8 +16,10 @@ $processor$: toc
 
 -- ps.page:
 show-menu: true
+backgroundimage: $assets.files.static.a1.jpg
 
--- services: Welcome, this is my services page
+
+-- ps.services: Welcome, this is my services page
 services-title: Services Provide by Me:
 item: $item
 contact-info: Services i provide
@@ -33,58 +35,3 @@ PageMaker including versions of Lorem Ipsum.passages, and more recently with des
 PageMaker including versions of Lorem Ipsum.
 
 
-
-
--- ftd.column services:
-caption title:
-body body:
-string services-title:
-fpm.toc-item list item:
-string contact-info:
-string contact-url:
-
---- ftd.text: $title
-role: $fpm.type.heading-small
-color: $fpm.color.main.background.step-1
-align: center
-margin-top: -15
-
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
-style: medium
-color: $fpm.color.main.background.step-1
-margin-top: 25
-text-align: justify
-
---- ftd.text: $services-title
-role: $fpm.type.copy-relaxed
-style: semi-bold
-color: $fpm.color.main.background.step-1
-margin-top: 30
-
---- list-loop: $obj.title
-$loop$: $item as $obj
-
-
-
--- ftd.row list-loop:
-caption title:
-width: fill
-
---- ftd.column: 
-background-color: $fpm.color.main.background.step-1
-border-radius: 50
-margin-top: 25
-height: 6
-width: 6
-
-
-
-
---- ftd.text: $title
-margin-left: 15
-margin-top: -5
-role: $fpm.type.fine-print
-color: $fpm.color.main.background.step-1
-width: 400
