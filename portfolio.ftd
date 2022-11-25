@@ -161,11 +161,13 @@ type: Mobile Application
 
 
 
--- ps.page:
+
+
+
+
+ ps.page:
 show-menu: true
-
-
-
+backgroundimage: $assets.files.static.a4.jpg
 
 -- caffeine.show-resume:
 resume: $john-doe

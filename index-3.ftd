@@ -17,6 +17,69 @@ $processor$: sitemap
 
 
 
+-- ftd.column about-page:
+optional caption title:
+ftd.image-src backgroundimage:
+optional string profile:
+optional ftd.image-src profile-image:
+body body:
+width: fill
+height: fill
+padding-horizontal: 200
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-large
+style: bold
+color: $fpm.color.main.background.step-1
+align: center
+
+--- ftd.column:
+width: fill
+height: percent 80
+z-index: 1
+background-image: $backgroundimage
+
+--- ftd.column:
+width: fill
+height: fill
+background-color: $blur
+id: aaa
+z-index: 999
+shadow-offset-x: 0
+shadow-offset-y: 4
+shadow-size: 0
+shadow-blur: 4
+shadow-color: $fpm.color.main.text
+border-radius: 8
+padding-vertical: 24
+padding-horizontal: 24
+
+--- ftd.text: Hi there,
+role: $fpm.type.heading-medium
+style: medium
+
+
+--- ftd.row:
+width: fill
+spacing: 8
+
+--- ftd.text: I am 
+role: $fpm.type.heading-medium
+style: medium
+
+--- ftd.text: $profile
+role: $fpm.type.heading-medium
+style: medium
+
+--- container: aaa
+--- ftd.text:
+text: $body
+role: $fpm.type.heading-medium
+style: medium
+
+
+
 
 -- ftd.column ps:
 width: fill
