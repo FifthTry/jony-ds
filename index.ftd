@@ -39,9 +39,8 @@ boolean show-menu: false
 fpm.toc-item list sections: $sitemap.sections
 ftd.image-src backgroundimage: $assets.files.static.a1.jpg
 background-image: $backgroundimage
-min-height: fill
-padding-vertical: 24
-padding-horizontal: 24
+padding-vertical: 36
+padding-horizontal: 36
 
 --- ftd.column:
 width: percent 10
@@ -73,8 +72,8 @@ $show-menu: $show-menu
 --- ftd.column:
 id: main-container
 align: center
-padding-vertical: 24
-padding-horizontal: 48
+padding-vertical: 80
+padding-horizontal: 84
 background-color: $fpm.color.main.text-strong
 
 
@@ -102,7 +101,7 @@ string profile:
 string width: 614
 boolean $show-menu: false
 width: fill
-height: fill
+height if not $show-menu: calc 100vh - 48px
 
 --- ftd.row:
 width: fill
@@ -253,14 +252,15 @@ $loop$: $sections as $obj
 caption title:
 string url:
 boolean is-active:
+margin-top: 12
 
 --- ftd.text: $title
-role: $fpm.type.copy-large
+role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
 color if $is-active: $fpm.color.main.custom.ten
 link: $url
 padding-left: 15
-padding-top: 25
+padding-bottom: 12
 padding-right: 20
 align: right
 width: fill

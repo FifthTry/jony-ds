@@ -1,0 +1,154 @@
+
+
+-- import: fpm
+-- import: fifthtry.github.io/jony-ps/assets 
+-- import: fifthtry.github.io/jony-ps as ps
+
+-- ps.page:
+show-menu: true
+
+-- contact-page: Lorem Ipsum is simply
+
+Lorem Ipsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Ipsum.
+
+
+-- ftd.column contact-page:
+caption title:
+body body:
+color: $fpm.color.main.background.step-1
+
+--- ftd.column:
+border-bottom: 1
+border-color: $fpm.color.main.text
+margin-bottom: 32
+padding-bottom: 32
+spacing: 12
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+text-align: center
+width: fill
+
+--- ftd.text: 
+text: $body
+role: $fpm.type.copy-relaxed
+text-align: center
+
+
+--- container: ftd.main
+
+--- ftd.column:
+id: kk
+width: fill
+spacing: 12
+margin-bottom: 32
+
+
+
+
+--- ftd.text: Name
+width: fill
+role: $fpm.type.copy-large
+
+--- container: kk
+
+--- ftd.column:
+width: fill
+
+
+
+--- ftd.row:
+width: fill
+id: gg
+spacing: 48
+
+--- ftd.column:
+width: fill
+
+--- ftd.input:
+placeholder: Enter package
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.text
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+width: fill
+border-radius: 8
+background-color: $fpm.color.main.text-strong
+margin-right: 32
+--- ftd.text: first name
+
+--- container: gg
+
+--- ftd.column:
+width: fill
+
+--- ftd.input:
+placeholder: Enter package
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.text
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+border-radius: 8
+width: fill
+background-color: $fpm.color.main.text-strong
+margin-right: 32
+
+--- ftd.text: first name
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+margin-bottom: 32
+spacing: 12
+
+--- ftd.text: email
+role: $fpm.type.copy-large
+
+--- ftd.input:
+placeholder: Enter package
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.text
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+width: fill
+border-radius: 8
+background-color: $fpm.color.main.text-strong
+margin-right: 32
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+margin-bottom: 32
+spacing: 12
+
+--- ftd.text: contact
+role: $fpm.type.copy-large
+
+--- ftd.input:
+placeholder: Enter package
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.text
+border-radius: 8
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+width: fill
+background-color: $fpm.color.main.text-strong
+margin-right: 32
+
