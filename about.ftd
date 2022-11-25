@@ -1,0 +1,44 @@
+-- import: fpm
+-- import: fifthtry.github.io/jony-ps/assets 
+-- import: fifthtry.github.io/jony-ps as ps
+
+
+
+
+-- ps.page:
+show-menu: true
+
+-- about-page: ABOUT ME
+backgroundimage: $assets.files.static.women.png
+profile: Web Designer
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type
+specimen book. It has survived not only five centuries, but also the leap into
+electronic typesetting, remaining essentially unchanged. It was popularised 
+in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Ipsum.
+
+
+-- ftd.color blur:
+dark: #a8a29e8f
+light: #a8a29e8f
+
+-- ftd.column about-page:
+caption title:
+ftd.image-src backgroundimage:
+string profile:
+body body:
+width: fill
+background-color: $fpm.color.main.text-strong
+border-top-radius: 8
+
+--- ftd.text:
+padding-vertical: 24
+padding-horizontal: 24
+text: $body
+color: $fpm.color.main.background.step-1
+role: $fpm.type.heading-medium
+style: medium

@@ -1,0 +1,116 @@
+-- import: fpm
+-- import: fifthtry.github.io/jony-ps/home as home
+-- import: fifthtry.github.io/jony-ps/about as about
+-- import: fifthtry.github.io/jony-ps/assets
+
+-- fpm.sitemap-data sitemap:
+$processor$: sitemap
+
+
+-- ps: 
+
+
+
+
+
+
+
+
+
+
+-- ftd.column ps:
+width: fill
+open: true
+append-at: main-container
+caption title: LOGO
+optional ftd.image-src site-logo:
+fpm.toc-item list sections: $sitemap.sections
+
+--- header: $title
+sections: $sections
+
+--- container: ftd.main
+
+--- ftd.column:
+id: main-container
+width: fill
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column header:
+caption title:
+optional ftd.image-src site-logo:
+fpm.toc-item list sections: 
+optional string nav-title:
+string width: fill
+width: $width
+height: fill
+
+--- ftd.row:
+background-color: $fpm.color.main.cta-tertiary.pressed
+color: $white
+width: fill
+id: jjj
+height: 70
+z-index: 10
+
+--- ftd.text: $title
+padding-left: 50
+role: $fpm.type.heading-medium
+padding-top: 10
+width: fill
+
+
+--- header-item: $obj.title
+url: $obj.url
+$loop$: $sections as $obj
+
+-- ftd.row header-item:
+caption title:
+string url:
+
+--- ftd.text: $title
+role: $fpm.type.copy-large
+color: $white
+link: $url
+padding-left: 15
+padding-top: 25
+padding-right: 20
+align: right
+width: fill
+
+
+
+
+
+
+
+-- ftd.color purple: purple
+dark: purple
+
+-- ftd.color white: white
+dark: white

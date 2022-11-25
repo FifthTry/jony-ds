@@ -3,6 +3,28 @@
 -- fpm.package: fifthtry.github.io/jony-ps
 download-base-url: https://raw.githubusercontent.com/fifthtry/jony-ps/main
 
+
+
+-- fpm.dependency: fifthtry.github.io/doc-site as ds
+-- fpm.dependency: fifthtry.github.io/resume
+
+
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 
 -- fpm.auto-import: ds
+
+-- fpm.sitemap:
+
+#  Home: /
+
+# About: /about
+
+# Services: /
+
+# Portfolio: /
+
+# Blog: /
+
+# Work: /
+
+# Contact: /
