@@ -6,13 +6,13 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/jony-ps/main
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 -- fpm.dependency: fifthtry.github.io/resume
--- fpm.dependency: fifthtry.github.io/caffeine-resume as caffeine
+-- fpm.dependency: fifthtry.github.io/caffeine-resume 
 
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 
 -- fpm.auto-import: ds
--- fpm.auto-import: caffeine
+
 
 -- fpm.sitemap:
 
