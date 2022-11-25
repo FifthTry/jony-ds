@@ -125,6 +125,21 @@ width: $width
 padding-vertical: 35
 border-radius : 8
 align: center
+id: hhh
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.text-strong
+text-align: center
+width: fill
+
+
+--- ftd.text: $profile
+role: $fpm.type.heading-hero
+color: $fpm.color.main.text-strong
+text-align: center
+width: fill
 
 --- container: kkk
 
@@ -142,7 +157,6 @@ role: $fpm.type.heading-hero
 color: $fpm.color.main.text-strong
 text-align: center
 width: fill
-
 
 
 
