@@ -7,18 +7,17 @@
 -- ps.page:
 show-menu: true
 
--- contact-page: Lorem Ipsum is simply
+-- contact-page: Lets Connect
 
 Lorem Ipsum is simply dummy text of the printing and typesetting 
 in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.
 
 
 -- ftd.column contact-page:
 caption title:
 body body:
 color: $fpm.color.main.background.step-1
+
 
 --- ftd.column:
 border-bottom: 1
@@ -28,14 +27,14 @@ padding-bottom: 32
 spacing: 12
 
 --- ftd.text: $title
-role: $fpm.type.copy-tight
+role: $fpm.type.heading-small
 text-align: center
 width: fill
 
 --- ftd.text: 
 text: $body
 role: $fpm.type.copy-relaxed
-text-align: center
+text-align: justify
 
 
 --- container: ftd.main
@@ -49,9 +48,9 @@ margin-bottom: 32
 
 
 
---- ftd.text: Name
+--- ftd.text: Name*
 width: fill
-role: $fpm.type.copy-large
+role: $fpm.type.label-small
 
 --- container: kk
 
@@ -69,19 +68,21 @@ spacing: 48
 width: fill
 
 --- ftd.input:
-placeholder: Enter package
 ;value: $VALUE
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
+border-color: $fpm.color.main.border-strong
 padding-vertical: $fpm.space.space-2
 padding-horizontal: $fpm.space.space-3
 border-width: 1
 width: fill
-border-radius: 8
+border-radius: 3
 background-color: $fpm.color.main.text-strong
-margin-right: 32
---- ftd.text: first name
+
+--- ftd.text: First Name
+margin-top: 5
+role: $fpm.type.blockquote
+color: $fpm.color.main.border-strong
 
 --- container: gg
 
@@ -89,20 +90,21 @@ margin-right: 32
 width: fill
 
 --- ftd.input:
-placeholder: Enter package
 ;value: $VALUE
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
+border-color: $fpm.color.main.border-strong
 padding-vertical: $fpm.space.space-2
 padding-horizontal: $fpm.space.space-3
 border-width: 1
-border-radius: 8
+border-radius: 3
 width: fill
 background-color: $fpm.color.main.text-strong
-margin-right: 32
 
---- ftd.text: first name
+--- ftd.text: Last Name
+margin-top: 5
+role: $fpm.type.blockquote
+color: $fpm.color.main.border-strong
 
 --- container: ftd.main
 
@@ -111,22 +113,20 @@ width: fill
 margin-bottom: 32
 spacing: 12
 
---- ftd.text: email
-role: $fpm.type.copy-large
+--- ftd.text: Email Address*
+role: $fpm.type.label-small
 
 --- ftd.input:
-placeholder: Enter package
 ;value: $VALUE
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
+border-color: $fpm.color.main.border-strong
 padding-vertical: $fpm.space.space-2
 padding-horizontal: $fpm.space.space-3
 border-width: 1
+border-radius: 3
 width: fill
-border-radius: 8
 background-color: $fpm.color.main.text-strong
-margin-right: 32
 
 --- container: ftd.main
 
@@ -135,20 +135,18 @@ width: fill
 margin-bottom: 32
 spacing: 12
 
---- ftd.text: contact
-role: $fpm.type.copy-large
+--- ftd.text: Contact*
+role: $fpm.type.label-small
 
 --- ftd.input:
-placeholder: Enter package
 ;value: $VALUE
 role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
-border-radius: 8
+border-color: $fpm.color.main.border-strong
 padding-vertical: $fpm.space.space-2
 padding-horizontal: $fpm.space.space-3
 border-width: 1
+border-radius: 3
 width: fill
 background-color: $fpm.color.main.text-strong
-margin-right: 32
 

@@ -5,13 +5,12 @@
 -- fpm.toc-item list item:
 $processor$: toc
 
-- too: 
-- hh:
-- too: 
-- hh:
-- too: 
-- hh:
-- too: 
+- Website Design: 
+- App Development:
+- Photography: 
+- Video Editing:
+- Copy Writing: 
+- Coding: 
 
 
 
@@ -19,7 +18,7 @@ $processor$: toc
 show-menu: true
 
 -- services: Welcome, this is my services page
-services-title: Services i provide
+services-title: Services Provide by Me:
 item: $item
 contact-info: Services i provide
 contact-url: /
@@ -48,18 +47,21 @@ string contact-url:
 role: $fpm.type.heading-small
 color: $fpm.color.main.background.step-1
 align: center
+margin-top: -15
 
 --- ftd.text:
 text: $body
 role: $fpm.type.copy-tight
 style: medium
 color: $fpm.color.main.background.step-1
-margin-top: 10
+margin-top: 25
+text-align: justify
 
 --- ftd.text: $services-title
-role: $fpm.type.heading-small
+role: $fpm.type.copy-relaxed
+style: semi-bold
 color: $fpm.color.main.background.step-1
-margin-top: 10
+margin-top: 30
 
 --- list-loop: $obj.title
 $loop$: $item as $obj
@@ -73,7 +75,7 @@ width: fill
 --- ftd.column: 
 background-color: $fpm.color.main.background.step-1
 border-radius: 50
-margin-top: 15
+margin-top: 25
 height: 6
 width: 6
 
@@ -85,3 +87,4 @@ margin-left: 15
 margin-top: -5
 role: $fpm.type.fine-print
 color: $fpm.color.main.background.step-1
+width: 400
