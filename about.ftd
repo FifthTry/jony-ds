@@ -22,6 +22,7 @@ passages, and more recently with desktop publishing software like Aldus
 PageMaker including versions of Lorem Ipsum.
 
 
+
 -- ftd.color blur:
 dark: #a8a29e8f
 light: #a8a29e8f
@@ -29,16 +30,18 @@ light: #a8a29e8f
 -- ftd.column about-page:
 caption title:
 ftd.image-src backgroundimage:
+ftd.image-src profile-image: $assets.files.static.about-me.png
 string profile:
 body body:
 width: fill
 background-color: $fpm.color.main.text-strong
 border-top-radius: 8
 
+
 --- ftd.text:
 padding-vertical: 24
 padding-horizontal: 24
 text: $body
 color: $fpm.color.main.background.step-1
-role: $fpm.type.heading-medium
+role: $fpm.type.copy-tight
 style: medium

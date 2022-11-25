@@ -28,8 +28,8 @@ $processor$: sitemap
 
 -- page: 
 
--- main: Meenu kumari
-profile: web desinger
+-- main: Meenu Kumari
+profile: Web Desinger
 
 -- ftd.row page:
 width: fill
@@ -41,6 +41,7 @@ ftd.image-src backgroundimage: $assets.files.static.a1.jpg
 background-image: $backgroundimage
 padding-vertical: 36
 padding-horizontal: 36
+
 
 --- ftd.column:
 width: percent 10
@@ -55,7 +56,6 @@ sections: $sections
 if: $show-menu
 width: fill
 
-
 --- ftd.column:
 width: fill
 
@@ -63,9 +63,8 @@ width: fill
 max-width: 1068
 align: center
 
-
---- main: Meenu kumari
-profile: web desinger
+--- main: Meenu Kumari
+profile: Web Desinger
 width: fill
 $show-menu: $show-menu
 
@@ -75,7 +74,6 @@ align: center
 padding-vertical: 80
 padding-horizontal: 84
 background-color: $fpm.color.main.text-strong
-
 
 
 --- container: ftd.main
@@ -106,6 +104,7 @@ height if not $show-menu: calc 100vh - 48px
 --- ftd.row:
 width: fill
 height: fill
+padding-top: 80
 
 --- ftd.column:
 width: fill
@@ -135,8 +134,8 @@ width: fill
 
 
 --- ftd.text: $profile
-role: $fpm.type.heading-hero
-color: $fpm.color.main.text-strong
+role: $fpm.type.heading-medium
+color: $fpm.color.main.custom.two
 text-align: center
 width: fill
 
@@ -160,8 +159,8 @@ width: fill
 
 
 --- ftd.text: $profile
-role: $fpm.type.heading-hero
-color: $fpm.color.main.text-strong
+role: $fpm.type.heading-medium
+color: $fpm.color.main.custom.two
 text-align: center
 width: fill
 
