@@ -1,0 +1,57 @@
+-- import: fpm
+-- import: fifthtry.github.io/jony-ps/assets 
+-- import: fifthtry.github.io/jony-ps as ps
+
+
+
+
+-- ps.page:
+show-menu: true
+
+-- about-page: ABOUT ME
+backgroundimage: $assets.files.static.women.png
+profile: Web Designer
+
+An "about me" section is the introductory segment of your resume. It briefly explains your professional background, skills and accomplishments. This section is typically between three and four lines of text and is like a resume summary, but has a more conversational tone. Components of the "about me" section include:
+
+Professional title
+Relevant skills and qualifications
+Career goals
+
+Using an "about me" section can help you customise your resume for different career opportunities as a recent graduate. This is especially true if you have developed many varied skills in different areas or have general knowledge in one key industry. Using this type of section allows you to highlight skills and experiences that best apply to each role.
+
+For those changing industries or careers, "about me" sections can help highlight their transferable skills. Even if you have little experience or background in your new industry, you may have many other qualifications that could be useful in the new role. Hiring managers may review the "about me" section before looking at your work history and decide you have enough knowledge or experience in other areas to benefit their company.
+
+
+-- ftd.color blur:
+dark: #a8a29e8f
+light: #a8a29e8f
+
+-- ftd.column about-page:
+caption title:
+ftd.image-src backgroundimage:
+ftd.image-src profile-image-two: $assets.files.static.about-two.png
+string profile:
+body body:
+width: fill
+background-color: $fpm.color.main.text-strong
+border-top-radius: 8
+
+--- ftd.image:
+src: $profile-image-two
+width:  180
+height: 150
+margin-top: -135
+align: right
+
+
+--- container: ftd.main
+--- ftd.text:
+padding-vertical: 24
+padding-horizontal: 24
+text: $body
+color: $fpm.color.main.background.step-1
+role: $fpm.type.copy-tight
+style: medium
+text-align: justify
+margin-top: -20

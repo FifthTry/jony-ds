@@ -1,0 +1,152 @@
+
+
+-- import: fpm
+-- import: fifthtry.github.io/jony-ps/assets 
+-- import: fifthtry.github.io/jony-ps as ps
+
+-- ps.page:
+show-menu: true
+
+-- contact-page: Lets Connect
+
+Lorem Ipsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+
+
+-- ftd.column contact-page:
+caption title:
+body body:
+color: $fpm.color.main.background.step-1
+
+
+--- ftd.column:
+border-bottom: 1
+border-color: $fpm.color.main.text
+margin-bottom: 32
+padding-bottom: 32
+spacing: 12
+
+--- ftd.text: $title
+role: $fpm.type.heading-small
+text-align: center
+width: fill
+
+--- ftd.text: 
+text: $body
+role: $fpm.type.copy-relaxed
+text-align: justify
+
+
+--- container: ftd.main
+
+--- ftd.column:
+id: kk
+width: fill
+spacing: 12
+margin-bottom: 32
+
+
+
+
+--- ftd.text: Name*
+width: fill
+role: $fpm.type.label-small
+
+--- container: kk
+
+--- ftd.column:
+width: fill
+
+
+
+--- ftd.row:
+width: fill
+id: gg
+spacing: 48
+
+--- ftd.column:
+width: fill
+
+--- ftd.input:
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.border-strong
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+width: fill
+border-radius: 3
+background-color: $fpm.color.main.text-strong
+
+--- ftd.text: First Name
+margin-top: 5
+role: $fpm.type.blockquote
+color: $fpm.color.main.border-strong
+
+--- container: gg
+
+--- ftd.column:
+width: fill
+
+--- ftd.input:
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.border-strong
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+border-radius: 3
+width: fill
+background-color: $fpm.color.main.text-strong
+
+--- ftd.text: Last Name
+margin-top: 5
+role: $fpm.type.blockquote
+color: $fpm.color.main.border-strong
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+margin-bottom: 32
+spacing: 12
+
+--- ftd.text: Email Address*
+role: $fpm.type.label-small
+
+--- ftd.input:
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.border-strong
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+border-radius: 3
+width: fill
+background-color: $fpm.color.main.text-strong
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+margin-bottom: 32
+spacing: 12
+
+--- ftd.text: Contact*
+role: $fpm.type.label-small
+
+--- ftd.input:
+;value: $VALUE
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.border-strong
+padding-vertical: $fpm.space.space-2
+padding-horizontal: $fpm.space.space-3
+border-width: 1
+border-radius: 3
+width: fill
+background-color: $fpm.color.main.text-strong
+
