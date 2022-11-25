@@ -59,9 +59,11 @@ width: fill
 --- ftd.column:
 width: fill
 
+
 --- ftd.column:
 max-width: 1068
 align: center
+
 
 --- main: Meenu Kumari
 profile: Web Desinger
@@ -74,7 +76,7 @@ align: center
 padding-vertical: 80
 padding-horizontal: 84
 background-color: $fpm.color.main.text-strong
-
+min-height: calc 100vh - 177px
 
 --- container: ftd.main
 
@@ -99,12 +101,12 @@ string profile:
 string width: 614
 boolean $show-menu: false
 width: fill
-height if not $show-menu: calc 100vh - 48px
+height if not $show-menu: calc 100vh - 74px
 
 --- ftd.row:
 width: fill
 height: fill
-padding-top: 80
+
 
 --- ftd.column:
 width: fill
@@ -146,7 +148,6 @@ width: fill
 if: $show-menu
 background-color: $overlay
 width: $width
-padding-vertical: 35
 align: center
 
 
