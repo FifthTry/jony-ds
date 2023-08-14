@@ -1,37 +1,19 @@
--- import: fpm
--- import: fifthtry.github.io/jony-ps/assets 
--- import: fifthtry.github.io/jony-ps as ps
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img-4
 
--- fpm.toc-item list item:
-$processor$: toc
-
-- Website Design: 
-- App Development:
-- Photography: 
-- Video Editing:
-- Copy Writing: 
-- Coding: 
-
-
-
--- ps.page:
-show-menu: true
-backgroundimage: $assets.files.static.a1.jpg
-
-
--- ps.services: Welcome, this is my services page
+-- ds.services: Welcome, this is my services page
 services-title: Services Provide by Me:
-item: $item
+item: $common.item
 contact-info: Services i provide
 contact-url: /
 
-
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+Lorem Idsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Idsum 
 passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.
+PageMaker including versions of Lorem Idsum.
 passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.passages, and more recently with desktop publishing software like Aldus 
-PageMaker including versions of Lorem Ipsum.
+PageMaker including versions of Lorem Idsum.passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Idsum.
 
-
+-- end: ds.page

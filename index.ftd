@@ -1,481 +1,1008 @@
--- import: fpm
--- import: fifthtry.github.io/jony-ps/assets
+-- import: fastn/processors as pr
+-- import: fastn-community.github.io/winter-cs as cs
+
+-- ds.page: 
+bg-img: $common.bg-img
+
+-- ds.main: Meenu Kumari
+profile: Web Desinger
+
+-- end: ds.page
+
+
+-- component page:
+optional caption title:
+common.social list social-list: $common.social-list
+optional string document-title:
+optional string document-description:
+optional ftd.raw-image-src document-image: 
+optional boolean $show-menu: false
+pr.toc-item list sections: $common.sitemap.sections
+ftd.background-image bg-img:
+children wrapper:
+ftd.color-scheme colors: $cs.main
+
+-- ftd.document:
+title if { page.document-title != NULL }: $page.document-title
+title: $page.title
+og-title if { page.document-title != NULL }: $page.document-title
+og-title: $page.title
+description: $page.document-description
+description if { page.document-description == NULL }: $page.title
+og-image: $page.document-image
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.desktop:
+
+-- page-desktop:
+wrapper: $page.wrapper
+sections: $page.sections
+$show-menu: $page.show-menu
+social-list: $page.social-list
+bg-img: $page.bg-img
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- page-mobile:
+wrapper: $page.wrapper
+sections: $page.sections
+$show-menu: $page.show-menu
+social-list: $page.social-list
+bg-img: $page.bg-img
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: ftd.document
+
+-- end: page
 
 
 
--- record social:
-ftd.image-src logo:
-string url:
-
--- social list social-list:
-
--- social-list:
-logo: $assets.files.static.linked.svg
-url: www.linkedin.com/in/meenu-kumari-3275501b8/
-
-
--- social-list:
-logo: $assets.files.static.twitter.svg
-url: www.linkedin.com/in/meenu-kumari-3275501b8/
-
-
--- social-list:
-logo: $assets.files.static.github.svg
-url: www.linkedin.com/in/meenu-kumari-3275501b8/
-
--- ftd.color overlay:
-dark: #18181bba
-light: #18181bba
 
 
 
 
 
--- fpm.sitemap-data sitemap:
-$processor$: sitemap
 
--- page: 
+
+-- component page-desktop:
+common.social list social-list:
+optional boolean $show-menu:
+pr.toc-item list sections:
+ftd.background-image bg-img:
+children wrapper:
+
+-- ftd.row:
+background.image: $page-desktop.bg-img
+width: fill-container
+height: fill-container
+padding-vertical.px: 36
+padding-horizontal.px: 36
+
+-- ftd.column:
+width.fixed.percent: 10
+
+-- header:
+sections: $page-desktop.sections
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { page-desktop.show-menu}
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+max-width.fixed.px: 1068
+align-self: center
 
 -- main: Meenu Kumari
 profile: Web Desinger
+$show-menu: $page-desktop.show-menu
 
--- ftd.row page:
-width: fill
-open: true
-append-at: main-container
-social list social-list: $social-list
-boolean show-menu: false
-fpm.toc-item list sections: $sitemap.sections
-ftd.image-src backgroundimage: $assets.files.static.a4.jpg
-background-image: $backgroundimage
-padding-vertical: 36
-padding-horizontal: 36
+-- ftd.column:
+align-self: center
+background.solid: $inherited.colors.text-strong
+min-height.fixed.calc: 100vh - 174px
+children: $page-desktop.wrapper
+padding-vertical.px: 65
+padding-horizontal.px: 84
+margin-bottom.px: 18
 
+-- end: ftd.column
 
---- ftd.column:
-width: percent 10
+-- end: ftd.column
 
---- header:
-sections: $sections
+-- end: ftd.column
 
---- container: ftd.main
+-- end: ftd.column
 
+-- ftd.column:
+if: { !page-desktop.show-menu}
+width: fill-container
+children: $page-desktop.wrapper
+align-content: center
+align-self: center
 
+-- end: ftd.column
 
---- ftd.column:
-if: $show-menu
-width: fill
+-- end: ftd.row
 
---- ftd.column:
-width: fill
-
-
---- ftd.column:
-max-width: 1068
-align: center
+-- end: page-desktop
 
 
---- main: Meenu Kumari
+
+
+
+
+
+
+
+
+-- component page-mobile:
+common.social list social-list:
+optional boolean $show-menu:
+pr.toc-item list sections:
+ftd.background-image bg-img:
+children wrapper:
+
+-- ftd.row:
+background.image: $page-mobile.bg-img
+width: fill-container
+height: fill-container
+padding-vertical.px: 12
+padding-horizontal.px: 12
+
+-- ftd.column:
+width.fixed.percent: 10
+
+-- header:
+sections: $page-mobile.sections
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { page-mobile.show-menu}
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 68
+
+-- ftd.column:
+max-width.fixed.px: 1068
+align-self: center
+
+-- main: Meenu Kumari
 profile: Web Desinger
-width: fill
-$show-menu: $show-menu
+$show-menu: $page-mobile.show-menu
 
---- ftd.column:
-id: main-container
-align: center
-padding-vertical: 80
-padding-horizontal: 84
-background-color: $fpm.color.main.text-strong
-min-height: calc 100vh - 174px
+-- ftd.column:
+align-self: center
+background.solid: $inherited.colors.text-strong
+min-height.fixed.calc: 100vh - 174px
+children: $page-mobile.wrapper
+padding-horizontal.px: 24
+margin-bottom.px: 50
 
---- container: ftd.main
+-- end: ftd.column
 
+-- end: ftd.column
 
---- ftd.column:
-if: not $show-menu 
-width: fill
-align: center
+-- end: ftd.column
 
---- ftd.column:
-max-width: 800
-align: center
-id: main-container
+-- end: ftd.column
 
+-- ftd.column:
+if: { !page-mobile.show-menu}
+width: fill-container
+children: $page-mobile.wrapper
+align-content: center
+align-self: center
 
+-- end: ftd.column
 
---- container: ftd.main
+-- end: ftd.row
 
-
---- ftd.row:
-right: 0
-top: 0
-
---- ftd.row:
-width: fill
-spacing: 24
-
---- social-card:
-$loop$: $social-list as $obj
-logo: $obj.logo
-url: $obj.url
-
-
-
--- ftd.column main:
-caption title:
-string profile:
-string width: 614
-boolean $show-menu: false
-width: fill
-height if not $show-menu: calc 100vh - 72px
-
---- ftd.row:
-width: fill
-height: fill
-
-
---- ftd.column:
-width: fill
-align: center
-
---- ftd.column:
-width: fill
-align: center
-id: kkk
-
-
---- ftd.column:
-if: not $show-menu
-background-color: $overlay
-width: $width
-padding-vertical: 35
-border-radius : 8
-align: center
-id: hhh
-
-
---- ftd.text: $title
-role: $fpm.type.heading-hero
-color: $fpm.color.main.text-strong
-text-align: center
-width: fill
-
-
---- ftd.text: $profile
-role: $fpm.type.heading-medium
-color: $fpm.color.main.custom.two
-text-align: center
-style: semi-bold
-width: fill
-
---- container: kkk
-
-
---- ftd.column:
-if: $show-menu
-background-color: $overlay
-width: $width
-align: center
-padding-vertical: 35
-
-
---- ftd.text: $title
-role: $fpm.type.heading-hero
-color: $fpm.color.main.text-strong
-text-align: center
-width: fill
-
-
-
---- ftd.text: $profile
-role: $fpm.type.heading-medium
-color: $fpm.color.main.custom.two
-text-align: center
-width: fill
+-- end: page-mobile
 
 
 
 
 
--- ftd.column header:
-optional caption title:
-optional ftd.image-src site-logo:
-fpm.toc-item list sections: 
-optional string nav-title:
-string width: fill
-width: $width
-height: fill
 
 
 
---- header-item: $obj.title
+
+-- component header:
+pr.toc-item list sections:
+ftd.image-src menu-icon: $assets.files.static.hamburger.svg
+boolean $sidebar-open: false
+
+-- ftd.column:
+width: fill-container
+ 
+-- ftd.mobile:
+
+-- header-mobile:
+menu-icon: $header.menu-icon
+$sidebar-open: $header.sidebar-open
+
+-- end: ftd.mobile
+
+-- menu-mobile:
+if: { header.sidebar-open }
+sections: $header.sections
+
+-- ftd.desktop:
+
+-- header-desktop:
+sections: $header.sections
+
+-- end: ftd.desktop
+
+-- end: ftd.column
+
+-- end: header
+
+
+
+
+
+
+
+
+
+
+-- component header-desktop:
+pr.toc-item list sections:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+
+-- header-item: $obj.title
+$loop$: $header-desktop.sections as $obj
 url: $obj.url
 is-active: $obj.is-active
-$loop$: $sections as $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: header-desktop
 
 
 
 
--- ftd.column header-item:
+
+
+
+
+
+
+-- component header-item:
 caption title:
 string url:
 boolean is-active:
-margin-top: 12
 
---- ftd.text: $title
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-color if $is-active: $fpm.color.main.custom.two
+-- ftd.column:
+margin-top.px: 12
+width: fill-container
+align-content: left
+
+-- ftd.text: $header-item.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+color if {header-item.is-active}: $inherited.colors.custom.two
 text-transform: uppercase
-link: $url
-padding-left: 15
-padding-right: 20
-align: right
-width: fill
+link: $header-item.url
+padding-left.px: 15
+padding-right.px: 20
+
+-- end: ftd.column
+
+-- end: header-item
 
 
 
 
 
 
--- ftd.color blur:
-dark: #a8a29e8f
-light: #a8a29e8f
 
--- ftd.column about-page:
+
+
+
+-- component header-mobile: 
+boolean $sidebar-open: false
+boolean $show-section: false
+ftd.image-src menu-icon:
+
+-- ftd.column: 
+width: fill-container
+$on-click-outside$: $ftd.set-bool($a = $header-mobile.show-section, v = false)
+$on-click-outside$: $ftd.set-bool($a = $header-mobile.sidebar-open, v = false)
+z-index: 999
+
+-- ftd.row:
+padding-vertical.px: 16
+width: fill-container
+spacing.fixed.px: 12
+
+-- ftd.image:
+src: $header-mobile.menu-icon
+$on-click$: $ftd.toggle($a = $header-mobile.sidebar-open)
+width.fixed.px: 32
+height.fixed.px: 32
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: header-mobile
+
+
+
+
+
+
+
+
+-- component menu-mobile:
+pr.toc-item list sections:
+boolean $show-section: false
+
+-- ftd.column:
+width.fixed.calc: 100% - 48px
+height: fill-container
+anchor: window
+left.px: 0
+top.px: 0
+overflow-y: auto
+padding-vertical.px: 20
+padding-horizontal.px: 24
+background.solid: $inherited.colors.background.step-2
+z-index: 999999
+
+-- ftd.column:
+if: { !ftd.is_empty(menu-mobile.sections) }
+width: fill-container
+
+-- header-item-mobile: $obj.title
+$loop$: $menu-mobile.sections as $obj
+children: $obj.children 
+is-active: $obj.is-active
+link: $obj.url
+$show-section: $menu-mobile.show-section
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $assets.files.static.cross.svg
+height.fixed.px: 24
+width: hug-content
+anchor: window
+right.px: 16
+top.px: 20
+$on-click$: $ftd.toggle($a = $menu-mobile.show-section)
+
+-- end: ftd.column
+
+-- end: menu-mobile
+
+
+
+
+
+
+
+
+
+
+-- component header-item-mobile:
+caption title:
+optional string link:
+pr.toc-item list children:
+boolean is-active: false
+boolean $show-section:
+boolean $open: false
+
+-- ftd.column:
+width: fill-container
+align-self: start
+$on-click$: $ftd.toggle($a = $header-item-mobile.open)
+$on-click-outside$: $ftd.set-bool($a = $header-item-mobile.open, v = false)
+
+-- ftd.text: $header-item-mobile.title 
+role: $inherited.types.copy-regular
+link: $header-item-mobile.link
+width: fill-container
+color: $inherited.colors.text
+color if { header-item-mobile.is-active }: $inherited.colors.success.text
+$on-click$: $ftd.set-bool($a = $header-item-mobile.show-section, v = true)
+padding-vertical.px: 12
+
+-- end: ftd.column
+
+-- end: header-item-mobile
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component main:
+caption title:
+string profile:
+boolean $show-menu: false
+
+-- ftd.column:
+width: fill-container
+height.fixed.calc if { !main.show-menu }: 100vh - 500px
+
+-- ftd.row:
+width: fill-container
+height: fill-container
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+if: {!main.show-menu}
+background.solid: $inherited.colors.background.overlay
+width.fixed.px: 614
+width if {ftd.device == "mobile"}: fill-container
+padding-vertical.px: 35
+border-radius.px: 8
+align-content: center
+
+-- ftd.text: $main.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.text: $main.profile
+role: $inherited.types.heading-medium
+color: $inherited.colors.custom.two
+text-align: center
+style: semi-bold
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if: {main.show-menu}
+background.solid: $inherited.colors.background.overlay
+opacity: 0.8
+width: fill-container
+align-content: center
+
+-- ftd.text: $main.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.text: $main.profile
+role: $inherited.types.heading-medium
+color: $inherited.colors.custom.two
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: main
+
+
+
+
+
+
+
+
+
+
+-- component about-page:
 optional caption title:
-optional ftd.image-src backgroundimage:
+optional ftd.image-src bg-img:
 optional ftd.image-src profile-image: 
 optional string profile:
 body body:
-width: fill
-background-color: $fpm.color.main.text-strong
-border-top-radius: 8
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- about-page-desktop: $about-page.title
+bg-img: $about-page.bg-img
+profile-image: $about-page.profile-image
+profile: $about-page.profile
+body: $about-page.body
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- about-page-mobile: $about-page.title
+bg-img: $about-page.bg-img
+profile-image: $about-page.profile-image
+profile: $about-page.profile
+body: $about-page.body
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: about-page
 
 
---- ftd.image:
-src: $profile-image
-width:  200
-align: center
 
---- ftd.text:
-padding-vertical: 24
-padding-horizontal: 24
-text: $body
-color: $fpm.color.main.background.step-1
-role: $fpm.type.copy-tight
+
+
+
+
+
+
+
+-- component about-page-desktop:
+optional caption title:
+optional ftd.image-src bg-img:
+optional ftd.image-src profile-image: 
+optional string profile:
+body body:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.text-strong
+
+-- ftd.image:
+src: $about-page-desktop.profile-image
+width.fixed.px: 150
+align-self: end
+anchor: parent
+top.px: -135
+
+-- ftd.text:
+padding-vertical.px: 24
+padding-horizontal.px: 24
+color: $inherited.colors.background.step-1
+role: $inherited.types.copy-small
 style: medium
 
+$about-page-desktop.body
+
+-- end: ftd.column
+
+-- end: about-page-desktop
 
 
 
 
--- ftd.column services:
+
+
+
+
+
+
+-- component about-page-mobile:
+optional caption title:
+optional ftd.image-src bg-img:
+optional ftd.image-src profile-image: 
+optional string profile:
+body body:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.text-strong
+
+-- ftd.image:
+src: $about-page-mobile.profile-image
+width.fixed.px: 100
+align-self: center
+
+-- ftd.text:
+padding-vertical.px: 24
+padding-horizontal.px: 24
+color: $inherited.colors.background.step-1
+role: $inherited.types.copy-small
+style: medium
+
+$about-page-mobile.body
+
+-- end: ftd.column
+
+-- end: about-page-mobile
+
+
+
+
+
+
+
+
+
+-- component services:
 caption title:
 body body:
 string services-title:
-fpm.toc-item list item:
+pr.toc-item list item: $common.services-toc.sections
 string contact-info:
 string contact-url:
 
---- ftd.text: $title
-role: $fpm.type.heading-small
-color: $fpm.color.main.background.step-1
-align: center
+-- ftd.column:
+width: fill-container
+margin-top.px if { ftd.device == "mobile"}: 24
 
---- ftd.text:
-text: $body
-role: $fpm.type.copy-tight
+-- ftd.text: $services.title
+role: $inherited.types.heading-small
+color: $inherited.colors.background.step-1
+text-align: center
+width: fill-container
+
+-- ftd.text:
+role: $inherited.types.copy-small
 style: medium
-color: $fpm.color.main.background.step-1
-margin-top: 24
+color: $inherited.colors.background.step-1
+margin-vertical.px: 24
 
---- ftd.text: $services-title
-role: $fpm.type.heading-small
-color: $fpm.color.main.background.step-1
-margin-top: 10
-margin-bottom: 12
+$services.body
 
---- list-loop: $obj.title
-$loop$: $item as $obj
+-- ftd.text: $services.services-title
+role: $inherited.types.heading-small
+color: $inherited.colors.background.step-1
+margin-vertical.px: 16
+
+-- list-loop: $obj.title
+$loop$: $services.item as $obj
+
+-- end: ftd.column
+
+-- end: services
 
 
 
--- ftd.row list-loop:
+
+
+
+
+
+
+
+-- component list-loop:
 caption title:
-width: fill
-margin-bottom: 12
 
---- ftd.column: 
-background-color: $fpm.color.main.background.step-1
-border-radius: 50
-margin-top: 4
-height: 6
-width: 6
+-- ftd.row:
+width: fill-container
+margin-bottom.px: 12
 
---- container: ftd.main
+-- ftd.column: 
+background.solid: $inherited.colors.background.step-1
+border-radius.px: 50
+margin-top.px: 4
+height.fixed.px: 6
+width.fixed.px: 6
 
---- ftd.text: $title
-margin-left: 15
-role: $fpm.type.fine-print
-color: $fpm.color.main.background.step-1
-width: fill
+-- end: ftd.column
 
+-- ftd.text: $list-loop.title
+margin-left.px: 15
+role: $inherited.types.fine-print
+color: $inherited.colors.background.step-1
+width: fill-container
 
+-- end: ftd.row
 
-
-
-
-
-
+-- end: list-loop
 
 
--- ftd.column contact-page:
+
+
+
+
+
+
+
+
+-- component portfolio:
+caption title:
+ftd.image-src portfolio-image-one: $assets.files.static.app.jpg
+ftd.image-src portfolio-image-two: $assets.files.static.web.jpg
+ftd.image-src portfolio-image-three: $assets.files.static.machine.jpg
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- portfolio-desktop: $portfolio.title
+portfolio-image-one: $portfolio.portfolio-image-one
+portfolio-image-two: $portfolio.portfolio-image-two
+portfolio-image-three: $portfolio.portfolio-image-three
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- portfolio-mobile: $portfolio.title
+portfolio-image-one: $portfolio.portfolio-image-one
+portfolio-image-two: $portfolio.portfolio-image-two
+portfolio-image-three: $portfolio.portfolio-image-three
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: portfolio
+
+
+
+
+
+
+
+
+
+
+
+-- component portfolio-desktop:
+caption title:
+ftd.image-src portfolio-image-one:
+ftd.image-src portfolio-image-two:
+ftd.image-src portfolio-image-three:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+
+-- ftd.text: $portfolio-desktop.title
+role: $inherited.types.heading-small
+color: $inherited.colors.background.step-1
+
+-- ftd.row:
+width.fixed.px: 900
+spacing.fixed.px: 24
+
+-- ftd.image:
+src: $portfolio-desktop.portfolio-image-one
+width.fixed.px: 500
+height.fixed.px: 420
+align-self: start
+
+-- ftd.column:
+spacing.fixed.px: 24
+
+-- ftd.image:
+src: $portfolio-desktop.portfolio-image-two
+width.fixed.px: 420
+height.fixed.px: 224
+
+-- ftd.image:
+src: $portfolio-desktop.portfolio-image-three
+width.fixed.px: 224
+height.fixed.px: 170
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: portfolio-desktop
+
+
+
+
+
+
+
+
+
+
+-- component portfolio-mobile:
+caption title:
+ftd.image-src portfolio-image-one:
+ftd.image-src portfolio-image-two:
+ftd.image-src portfolio-image-three:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+margin-top.px: 24
+
+-- ftd.text: $portfolio-mobile.title
+role: $inherited.types.heading-small
+color: $inherited.colors.background.step-1
+
+-- ftd.image:
+src: $portfolio-mobile.portfolio-image-one
+width.fixed.px: 260
+
+-- ftd.image:
+src: $portfolio-mobile.portfolio-image-two
+width.fixed.px: 260
+
+-- ftd.image:
+src: $portfolio-mobile.portfolio-image-three
+width.fixed.px: 260
+
+-- end: ftd.column
+
+-- end: portfolio-mobile
+
+
+
+
+
+
+
+
+
+
+
+-- component contact-page:
 caption title:
 body body:
-color: $fpm.color.main.background.step-1
 
---- ftd.column:
-border-bottom: 1
-border-color: $fpm.color.main.text
-margin-bottom: 32
-padding-bottom: 32
-spacing: 12
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.background.step-1
+spacing.fixed.px: 24
 
---- ftd.text: $title
-role: $fpm.type.copy-tight
+-- ftd.column:
+align-content: center
+border-bottom-width.px: 1
+border-color: $inherited.colors.border
+margin-bottom.px: 12
+padding-bottom.px: 16
+spacing.fixed.px: 12
+width: fill-container
+
+-- ftd.text: $contact-page.title
+role: $inherited.types.copy-large
 text-align: center
-width: fill
 
---- ftd.text: 
-text: $body
-role: $fpm.type.copy-relaxed
-text-align: center
+-- ftd.text: 
+role: $inherited.types.copy-regular
 
+$contact-page.body
 
---- container: ftd.main
+-- end: ftd.column
 
---- ftd.column:
-id: kk
-width: fill
-spacing: 12
-margin-bottom: 32
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 12
 
+-- ftd.text: Name *
+role: $inherited.types.copy-regular
 
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
 
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 8
 
---- ftd.text: Name
-width: fill
-role: $fpm.type.copy-large
-
---- container: kk
-
---- ftd.column:
-width: fill
-
-
-
---- ftd.row:
-width: fill
-id: gg
-spacing: 48
-
---- ftd.column:
-width: fill
-
---- ftd.input:
+-- ftd.text-input:
 placeholder: Enter package
-;value: $VALUE
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-3
-border-width: 1
-width: fill
-border-radius: 8
-background-color: $fpm.color.main.text-strong
-margin-right: 32
---- ftd.text: first name
+;;value: $VALUE
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+border-color: $inherited.colors.border
+padding-vertical.px: 8
+padding-horizontal.px: 12
+border-width.px: 1
+width: fill-container
+border-radius.px: 4
+background.solid: $inherited.colors.text-strong
 
---- container: gg
+-- ftd.text: First Name
 
---- ftd.column:
-width: fill
+-- end: ftd.column
 
---- ftd.input:
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 8
+
+-- ftd.text-input:
 placeholder: Enter package
-;value: $VALUE
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-3
-border-width: 1
-border-radius: 8
-width: fill
-background-color: $fpm.color.main.text-strong
-margin-right: 32
+;;value: $VALUE
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+border-color: $inherited.colors.border
+padding-vertical.px: 8
+padding-horizontal.px: 12
+border-width.px: 1
+width: fill-container
+border-radius.px: 4
+background.solid: $inherited.colors.text-strong
 
---- ftd.text: first name
+-- ftd.text: Last Name
 
---- container: ftd.main
+-- end: ftd.column
 
---- ftd.column:
-width: fill
-margin-bottom: 32
-spacing: 12
+-- end: ftd.row
 
---- ftd.text: email
-role: $fpm.type.copy-large
+-- end: ftd.column
 
---- ftd.input:
+-- ftd.column:
+width: fill-container
+padding-bottom.px: 12
+spacing.fixed.px: 12
+
+-- ftd.text: Email
+role: $inherited.types.copy-large
+
+-- ftd.text-input:
 placeholder: Enter package
-;value: $VALUE
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-3
-border-width: 1
-width: fill
-border-radius: 8
-background-color: $fpm.color.main.text-strong
-margin-right: 32
+;;value: $VALUE
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+border-color: $inherited.colors.border
+padding-vertical.px: 8
+padding-horizontal.px: 12
+border-width.px: 1
+width: fill-container
+border-radius.px: 4
+background.solid: $inherited.colors.text-strong
 
---- container: ftd.main
+-- end: ftd.column
 
---- ftd.column:
-width: fill
-margin-bottom: 32
-spacing: 12
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 12
 
---- ftd.text: contact
-role: $fpm.type.copy-large
+-- ftd.text: Contact
+role: $inherited.types.copy-large
 
---- ftd.input:
+-- ftd.text-input:
 placeholder: Enter package
-;value: $VALUE
-role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
-border-color: $fpm.color.main.text
-border-radius: 8
-padding-vertical: $fpm.space.space-2
-padding-horizontal: $fpm.space.space-3
-border-width: 1
-width: fill
-background-color: $fpm.color.main.text-strong
-margin-right: 32
+;;value: $VALUE
+role: $inherited.types.copy-small
+color: $inherited.colors.text-strong
+border-color: $inherited.colors.border
+padding-vertical.px: 8
+padding-horizontal.px: 12
+border-width.px: 1
+width: fill-container
+border-radius.px: 4
+background.solid: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: contact-page
 
 
-
--- ftd.column social-card:
-ftd.image-src logo:
-string url:
-
-
---- ftd.image:
-src: $logo
-link: $url
-width: 32
-height: 32

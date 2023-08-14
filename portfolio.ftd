@@ -1,55 +1,7 @@
--- import: fpm
--- import: fifthtry.github.io/jony-ps/assets 
--- import: fifthtry.github.io/jony-ps as ps
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img-4
 
+-- ds.portfolio: Welcome to my portfolio page
 
-
-
-
-
--- ps.page:
-show-menu: true
-
-
--- portfolio: Welcome to my portfolio page
-
-
--- ftd.column portfolio:
-caption title:
-ftd.image-src portfolio-image-one: $assets.files.static.app.jpg
-ftd.image-src portfolio-image-two: $assets.files.static.web.jpg
-ftd.image-src portfolio-image-three: $assets.files.static.machine.jpg
-
-
-
---- ftd.text: $title
-role: $fpm.type.heading-small
-color: $fpm.color.main.background.step-1
-align: center
-margin-top: -35
-
-
-
---- ftd.image:
-src: $portfolio-image-one
-width: 215
-height: 420
-align: left
-padding-top: 40
-
-
---- ftd.image:
-src: $portfolio-image-two
-width:  420
-height: 175
-margin-left: 225
-margin-top: -380
-
-
-
---- ftd.image:
-src: $portfolio-image-three
-width:  210
-height: 190
-margin-top: 15
-margin-left: 325
+-- end: ds.page

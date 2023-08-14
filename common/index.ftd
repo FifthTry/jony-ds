@@ -1,0 +1,63 @@
+-- import: fastn/processors as pr
+
+-- record social:
+ftd.image-src logo:
+string url:
+
+-- social list social-list:
+
+-- social:
+logo: $assets.files.static.linked.svg
+url: www.linkedin.com/in/meenu-kumari-3275501b8/
+
+
+-- social:
+logo: $assets.files.static.twitter.svg
+url: www.linkedin.com/in/meenu-kumari-3275501b8/
+
+
+-- social:
+logo: $assets.files.static.github.svg
+url: www.linkedin.com/in/meenu-kumari-3275501b8/
+
+-- end: social-list
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.sitemap
+
+-- ftd.background-size.length bg-size:
+x.percent: 100
+y.percent: 100
+
+-- ftd.background-image bg-img: 
+src: $assets.files.static.a1.jpg
+repeat: no-repeat
+size: $bg-size
+
+-- ftd.background-image bg-img-2: 
+src: $assets.files.static.a2.jpg
+repeat: no-repeat
+size: $bg-size
+
+-- ftd.background-image bg-img-3: 
+src: $assets.files.static.a3.jpg
+repeat: no-repeat
+size: $bg-size
+
+-- ftd.background-image bg-img-4: 
+src: $assets.files.static.a1.jpg
+repeat: no-repeat
+size: $bg-size
+
+-- pr.sitemap-data services-toc:
+$processor$: pr.full-sitemap
+
+-- pr.toc-item list item:
+$processor$: pr.toc
+
+- Website Design: 
+- App Development:
+- Photography: 
+- Video Editing:
+- Copy Writing: 
+- Coding: 
