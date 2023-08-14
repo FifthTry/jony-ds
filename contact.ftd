@@ -1,16 +1,10 @@
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img
 
+-- ds.contact-page: Lets Connect
 
--- import: fpm
--- import: fifthtry.github.io/jony-ps/assets 
--- import: fifthtry.github.io/jony-ps as ps
+Lorem Idsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Idsum 
 
--- ps.page:
-show-menu: true
-backgroundimage: $assets.files.static.a2.jpg
-
-
--- ps.contact-page: Lets Connect
-
-
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+-- end: ds.page
