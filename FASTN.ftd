@@ -1,0 +1,27 @@
+-- import: fastn
+
+-- fastn.package: fifthtry.github.io/jony-ps
+download-base-url: https://raw.githubusercontent.com/fifthtry/jony-ps/main
+
+-- fastn.dependency: fifthtry.github.io/resume
+-- fastn.dependency: fifthtry.github.io/caffeine-resume
+-- fastn.dependency: fastn-community.github.io/winter-cs
+
+-- fastn.auto-import: fifthtry.github.io/jony-ps/assets
+-- fastn.auto-import: fifthtry.github.io/jony-ps/common
+-- fastn.auto-import: fifthtry.github.io/jony-ps/FASTN/ds
+
+
+-- fastn.sitemap:
+
+# Home: /
+
+# About: /about
+
+# Services: /services
+
+# Resume: /resume
+
+# Portfolio: /portfolio
+
+# Contact: /contact

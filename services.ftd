@@ -1,0 +1,19 @@
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img-4
+
+-- ds.services: Welcome, this is my services page
+services-title: Services Provide by Me:
+item: $common.item
+contact-info: Services i provide
+contact-url: /
+
+Lorem Idsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Idsum 
+passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Idsum.
+passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Idsum.passages, and more recently with desktop publishing software like Aldus 
+PageMaker including versions of Lorem Idsum.
+
+-- end: ds.page

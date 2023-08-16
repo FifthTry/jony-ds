@@ -1,0 +1,7 @@
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img-4
+
+-- ds.portfolio: Welcome to my portfolio page
+
+-- end: ds.page

@@ -1,0 +1,38 @@
+-- import: fastn
+-- import: fifthtry.github.io/jony-ps/common
+-- import: fastn-community.github.io/winter-cs as cs
+-- import: fifthtry.github.io/jony-ps
+export: main, about-page, services, contact-page, social-card, list-loop, portfolio
+
+
+-- common.site-logo site-logo: $assets.files.assets.ipsum-logo.svg
+
+-- component page:
+optional caption title:
+common.social list social-list: $common.social-list
+optional string document-title:
+optional string document-description:
+optional ftd.raw-image-src document-image: 
+optional boolean $show-menu: false
+ftd.background-image bg-img:
+children wrapper:
+
+-- jony-ps.page: $page.title
+document-title: $page.document-title
+document-description: $page.document-description
+document-image: $page.document-image
+$show-menu: $page.show-menu
+colors: $cs.main
+social-list: $page.social-list
+bg-img: $page.bg-img
+
+-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+children: $page.wrapper
+
+-- end: ftd.column
+
+-- end: jony-ps.page
+
+-- end: page

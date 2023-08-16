@@ -1,0 +1,10 @@
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img
+
+-- ds.contact-page: Lets Connect
+
+Lorem Idsum is simply dummy text of the printing and typesetting 
+in the 1960s with the release of Letraset sheets containing Lorem Idsum 
+
+-- end: ds.page

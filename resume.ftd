@@ -1,0 +1,11 @@
+-- import: fifthtry.github.io/caffeine-resume as caffeine
+-- import: fifthtry.github.io/resume/sample as s
+
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img
+
+-- caffeine.show-resume:
+resume: $s.john-doe
+
+-- end: ds.page

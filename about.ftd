@@ -1,0 +1,18 @@
+-- ds.page:
+$show-menu: true
+bg-img: $common.bg-img
+
+-- ds.about-page: 
+profile-image: $assets.files.static.about-two.png
+
+An "about me" section is the introductory segment of your resume. It briefly explains your professional background, skills and accomplishments. This section is typically between three and four lines of text and is like a resume summary, but has a more conversational tone. Components of the "about me" section include:
+
+Professional title
+Relevant skills and qualifications
+Career goals
+
+Using an "about me" section can help you customise your resume for different career opportunities as a recent graduate. This is especially true if you have developed many varied skills in different areas or have general knowledge in one key industry. Using this type of section allows you to highlight skills and experiences that best apply to each role.
+
+For those changing industries or careers, "about me" sections can help highlight their transferable skills. Even if you have little experience or background in your new industry, you may have many other qualifications that could be useful in the new role. Hiring managers may review the "about me" section before looking at your work history and decide you have enough knowledge or experience in other areas to benefit their company.
+
+-- end: ds.page
