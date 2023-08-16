@@ -14,14 +14,14 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/jony-ps/main
 
 -- fastn.sitemap:
 
-# Home: /
+# Home: index.html
 
-# About: /about
+# About: about/
 
-# Services: /services
+# Services: services/
 
-# Resume: /resume
+# Resume: resume/
 
-# Portfolio: /portfolio
+# Portfolio: portfolio/
 
-# Contact: /contact
+# Contact: contact/
